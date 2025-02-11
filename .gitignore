@@ -1,0 +1,53 @@
+# Node modules
+node_modules/
+
+# Build
+dist/
+build/
+
+# Vite
+.vite/
+*.env.local
+*.env.development.local
+*.env.production.local
+*.env.test.local
+
+# Editor/IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Misc
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Cache
+.cache/
+.npm/
+.yarn/
+
+# ESLint & Prettier
+.eslintcache
+.prettier.cache
+
+# Vitest
+coverage/
+.vitest/
+
+# Storybook (si usás)
+.storybook/out/
+
