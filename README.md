@@ -1,50 +1,81 @@
-# React + TypeScript + Vite
+# Gestor de Frases con React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para gestión de frases construida con React y TypeScript que incluye:
 
-Currently, two official plugins are available:
+✨ Creación y eliminación de frases  
+🔍 Búsqueda en tiempo real  
+📱 Diseño responsive con Material UI  
+🧪 Tests unitarios con Vitest y Testing Library
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Captura de pantalla 2025-02-11 085246](https://github.com/user-attachments/assets/dc44a7d3-8bac-4743-ab34-16a959416d6b)
 
-## Expanding the ESLint configuration
+## Características Principales
+- **Gestión de frases**:
+  - Agregar nuevas frases
+  - Eliminar frases existentes
+  - Búsqueda instantánea
+- **Interfaz intuitiva**:
+  - Diseño responsive
+  - Componentes de Material UI
+  - Feedback visual inmediato
+- **Arquitectura**:
+  - Estado global con React Context
+  - Tipado estático con TypeScript
+  - Componentes reutilizables
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologías Utilizadas
+- **Frontend**:
+  - React 18
+  - TypeScript 5
+  - Material UI 5
+- **Gestión de Estado**:
+  - React Context API
+- **Testing**:
+  - Vitest
+  - Testing Library
+- **Bundler**:
+  - Vite
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clonar repositorio
+   
+2. Instalar dependencias:
+```
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+3. Iniciar aplicación:
+```
+npm run dev
+```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Uso
+- Agregar nueva frase:
+  - Escribe la frase en el campo de texto
+  - Presiona "Agregar"
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+- Eliminar frase:
+  - Haz clic en "Eliminar" en la tarjeta de la frase
+
+- Buscar frases:
+  - Escribe en el campo de búsqueda
+  - Las resultados se actualizan automáticamente
+
+## Testing
+Ejecutar tests unitarios:
+
+```
+npm run test
+```
+Ejecutar tests en modo watch:
+
+```
+npm run test:watch
+```
+
+Generar reporte de cobertura:
+
+```
+npm run test:coverage
 ```
